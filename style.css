@@ -188,6 +188,51 @@ main {
   background: rgba(0,0,0,0.02);
 }
 
+/* Add this to your style.css */
+.project-item {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.9;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.project-item:hover::before {
+  transform: translateY(0);
+}
+
+.project-item:hover h3,
+.project-item:hover p {
+  color: white;
+}
+
+.project-item h3 {
+  transition: color 0.3s ease;
+}
+
+.project-item p {
+  transition: color 0.3s ease 0.1s;
+}
+
 /* Social Icons */
 .social-link i {
   margin-right: 8px;
@@ -216,19 +261,36 @@ main {
   gap: 1rem;
 }
 
+/* Skill Items Animation */
 .skill {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  background: transparent;
+  padding: 0.2rem 0; /* Adjust padding as needed */
   text-align: center;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.3s;
+}
+
+.skill::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start from center */
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.skill:hover::after {
+  width: 50%; /* Grows to 80% of element width */
+  background: var(--accent-black);
 }
 
 .skill:hover {
-  background: white;
-  transform: scale(1.05);
+  color: var(--primary-blue); /* Optional text color change */
 }
+
 
 /* Contact Section */
 #contact {
