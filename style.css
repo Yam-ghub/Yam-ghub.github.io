@@ -283,7 +283,7 @@ main {
 }
 
 .skill:hover::after {
-  width: 50%; /* Grows to 80% of element width */
+  width: 80%; /* Grows to 80% of element width */
   background: var(--accent-black);
 }
 
