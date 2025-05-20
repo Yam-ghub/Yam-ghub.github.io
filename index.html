@@ -2,54 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>William Laurence Ramos | Data Analyst</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <header>
-    <h1>Your Name</h1>
+    <div class="top-left-name">
+      <h2>William Laurence Ramos </h2>
+      <h3>Data Analyst</h3>
+    </div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="resume.html">Resume</a>
-      <a href="#contact">Contact</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>A short summary about you and your data analysis focus.</p>
-  </section>
+      <section id="projects" class="page-section">
+      <div class="section-content">
+        <h1 class="section-title">Projects</h1>
+        <ul class="project-list">
+          <li class="project-item">
+            <a href="YOUR_LINK_HERE" target="_blank" class="project-link">
+            <h3>Sales Dashboard with Power BI</h3>
+            <p>Interactive visualization of quarterly sales data</p>
+            </a>
+          </li>
+          <li class="project-item">
+            <a href="YOUR_LINK_HERE" target="_blank" class="project-link">
+            <h3>Customer Retention with Python</h3>
+            <p>Churn prediction model with 92% accuracy</p>
+            </a>
+          </li>
+          <li class="project-item">
+            <a href="YOUR_LINK_HERE" target="_blank" class="project-link">
+            <h3>SQL Analysis of Ecommerce Data</h3>
+            <p>Optimized product recommendations</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>SQL</li>
-      <li>Tableau</li>
-      <li>Power BI</li>
-      <li>Excel</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="social-icons">
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">
-        <img src="assets/linkedin.svg" alt="LinkedIn" />
-      </a>
-      <a href="https://facebook.com/yourprofile" target="_blank">
-        <img src="assets/facebook.svg" alt="Facebook" />
-      </a>
+<section id="resume" class="page-section">
+  <div class="section-content">
+    <h1 class="section-title">Resume</h1>
+    <div class="resume-content">
+      <p>You can download my full resume <a href="https://drive.google.com/file/d/1j1d05B0B-pR4-hYUExb9yLLRaNoJCE4O/view?usp=sharing" target="_blank" class="highlight-link">here</a>.</p>
     </div>
-  </section>
+  </div>
+</section>
+
+    <section id="about" class="page-section">
+      <div class="section-content">
+        <h1 class="section-title">About Me</h1>
+        <div class="about-content">
+          <p>I’m a Data Analyst and Computer Engineering student with hands-on experience in data cleaning, exploration, and visualization using SQL, Python, Power BI, and Excel.
+             I’m passionate about turning complex, unclear data into meaningful and understandable insights that drive better decisions and solve real-world problems.</p>
+
+          <div class="skills-grid">
+            <div class="skill"><i class="fab fa-python"></i> Python</div>
+            <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
+            <div class="skill"><i class="fas fa-industry"></i> AVEVA Pi System</div>
+            <div class="skill"><i class="fas fa-robot"></i> Machine Learning</div>
+            <div class="skill"><i class="fas fa-brain"></i> Deep Learning</div>
+            <div class="skill"><i class="fas fa-chart-bar"></i> Power BI</div>
+            <div class="skill"><i class="fas fa-database"></i> SQL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="page-section">
+      <div class="section-content">
+        <h1 class="section-title">Contact</h1>
+        <div class="contact-content">
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/yamramos" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.facebook.com/MendozaMentality/" class="social-link">
+              <i class="fab fa-facebook"></i> Facebook
+            <a href="https://github.com/Yam-ghub" target="_blank" class="social-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Your Name</p>
+    <p>&copy; 2025 William Laurence Ramos</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
