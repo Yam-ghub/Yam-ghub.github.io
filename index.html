@@ -13,63 +13,76 @@
 <body>
   <header>
     <div class="top-left-name">
-      <h2>William Laurence Ramos </h2>
+      <h2>William Laurence Ramos</h2>
       <h3>Data Analyst</h3>
     </div>
     <nav>
-      <a href="#resume" class="nav-link">Resume</a>
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#about" class="nav-link">About Me</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
       <a href="#contact" class="nav-link">Contact</a>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
   </header>
-
   
-  <section id="resume" class="page-section">
-    <div class="section-content">
-      <h1 class="section-title">Resume</h1>
-      <div class="resume-content">
-        <p>You can download my full resume <a href="https://drive.google.com/file/d/1j1d05B0B-pR4-hYUExb9yLLRaNoJCE4O/view?usp=sharing" target="_blank" class="highlight-link">here</a>.</p>
-      </div>
-    </div>
-  </section>
-
   <main>
     <section id="projects" class="page-section">
       <div class="section-content">
         <h1 class="section-title">Projects</h1>
         <div class="project-content">
-          <p>Here are some of my projects:</p>
+          <p class="section-subtitle">Here are some of my projects showcasing my data analysis expertise</p>
           <ul class="project-list">
             <li class="project-item">
               <a href="#project1" class="project-link">
+                <div class="project-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
                 <h3>Sales Dashboard with Power BI</h3>
                 <p>Interactive visualization of quarterly sales data</p>
+                <span class="project-tech">Power BI • DAX • SQL</span>
               </a>
             </li>
             <li class="project-item">
               <a href="#project2" class="project-link">
+                <div class="project-icon">
+                  <i class="fas fa-users"></i>
+                </div>
                 <h3>Customer Retention with Python</h3>
                 <p>Churn prediction model with 92% accuracy</p>
+                <span class="project-tech">Python • Scikit-learn • Pandas</span>
               </a>
             </li>
             <li class="project-item">
               <a href="#project3" class="project-link">
+                <div class="project-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
                 <h3>SQL Analysis of Ecommerce Data</h3>
                 <p>Optimized product recommendations</p>
+                <span class="project-tech">SQL • BigQuery • Tableau</span>
               </a>
             </li>
-            <!-- Add these 2 new project items -->
             <li class="project-item">
               <a href="#project4" class="project-link">
+                <div class="project-icon">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
                 <h3>Market Trend Analysis</h3>
                 <p>Time-series forecasting using ARIMA models</p>
+                <span class="project-tech">Python • Statsmodels • Matplotlib</span>
               </a>
             </li>
             <li class="project-item">
               <a href="#project5" class="project-link">
+                <div class="project-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
                 <h3>Data Pipeline Automation</h3>
                 <p>ETL workflow with Apache Airflow</p>
+                <span class="project-tech">Python • Airflow • PostgreSQL</span>
               </a>
             </li>
           </ul>
@@ -81,17 +94,113 @@
       <div class="section-content">
         <h1 class="section-title">About Me</h1>
         <div class="about-content">
-          <p>I’m a Data Analyst and Computer Engineering student with hands-on experience in data cleaning, exploration, and visualization using SQL, Python, Power BI, and Excel.
-             I’m passionate about turning complex, unclear data into meaningful and understandable insights that drive better decisions and solve real-world problems.</p>
+          <div class="about-text">
+            <p>I'm a Data Analyst and Computer Engineering student with hands-on experience in data cleaning, exploration, and visualization using SQL, Python, Power BI, and Excel. I'm passionate about turning complex, unclear data into meaningful and understandable insights that drive better decisions and solve real-world problems.</p>
+          </div>
+          <div class="skills-section">
+            <div class="skills-grid">
+              <div class="skill">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fas fa-file-excel"></i>
+                <span>Excel</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fas fa-chart-bar"></i>
+                <span>Power BI</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fas fa-industry"></i>
+                <span>AVEVA Pi System</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fas fa-robot"></i>
+                <span>Machine Learning</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <i class="fas fa-brain"></i>
+                <span>Deep Learning</span>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="skills-grid">
-            <div class="skill"><i class="fab fa-python"></i> Python</div>
-            <div class="skill"><i class="fas fa-database"></i> SQL</div>
-            <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
-            <div class="skill"><i class="fas fa-chart-bar"></i> Power BI</div>
-            <div class="skill"><i class="fas fa-industry"></i> AVEVA Pi System</div>
-            <div class="skill"><i class="fas fa-robot"></i> Machine Learning</div>
-            <div class="skill"><i class="fas fa-brain"></i> Deep Learning</div>
+    <section id="resume" class="page-section">
+      <div class="section-content">
+        <h1 class="section-title">Resume</h1>
+        <div class="resume-content">
+          <div class="resume-text">
+            <p class="resume-intro">My professional journey and qualifications at a glance</p>
+            <a href="https://drive.google.com/file/d/1j1d05B0B-pR4-hYUExb9yLLRaNoJCE4O/view?usp=sharing" target="_blank" class="download-btn">
+              Download Full Resume <i class="fas fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="page-section">
+      <div class="section-content">
+        <h1 class="section-title">Certifications</h1>
+        <div class="certifications-content">
+          <div class="certification-grid">
+            <div class="certification-card">
+              <div class="certification-header">
+                <i class="fas fa-certificate"></i>
+                <h3>Google Data Analytics Professional Certificate</h3>
+              </div>
+              <p class="certification-issuer">Google | 2023</p>
+            </div>
+            <div class="certification-card">
+              <div class="certification-header">
+                <i class="fas fa-certificate"></i>
+                <h3>Microsoft Certified: Power BI Data Analyst Associate</h3>
+              </div>
+              <p class="certification-issuer">Microsoft | 2022</p>
+            </div>
+            <div class="certification-card">
+              <div class="certification-header">
+                <i class="fas fa-certificate"></i>
+                <h3>SQL for Data Science</h3>
+              </div>
+              <p class="certification-issuer">Coursera | 2021</p>
+            </div>
+            <div class="certification-card">
+              <div class="certification-header">
+                <i class="fas fa-certificate"></i>
+                <h3>Python for Data Science and Machine Learning</h3>
+              </div>
+              <p class="certification-issuer">Udemy | 2020</p>
+            </div>
           </div>
         </div>
       </div>
@@ -101,12 +210,14 @@
       <div class="section-content">
         <h1 class="section-title">Contact</h1>
         <div class="contact-content">
+          <p class="contact-intro">Let's connect and discuss how I can help with your data needs</p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/yamramos" target="_blank" class="social-link">
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://www.facebook.com/MendozaMentality/" class="social-link">
+            <a href="https://www.facebook.com/MendozaMentality/" target="_blank" class="social-link">
               <i class="fab fa-facebook"></i> Facebook
+            </a>
             <a href="https://github.com/Yam-ghub" target="_blank" class="social-link">
               <i class="fab fa-github"></i> GitHub
             </a>

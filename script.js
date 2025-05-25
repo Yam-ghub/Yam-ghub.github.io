@@ -1,67 +1,83 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Enhanced navigation with scroll snapping
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('.page-section');
+  // Mobile menu toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('nav');
   
-  // Click handler for navigation
+  mobileMenuBtn.addEventListener('click', function() {
+    nav.classList.toggle('active');
+  });
+  
+  // Smooth scroll for navigation links
+  const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       const targetSection = document.querySelector(targetId);
       
-      // Scroll to section with smooth behavior
-      targetSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      // Close mobile menu if open
+      nav.classList.remove('active');
+      
+      // Scroll to section
+      window.scrollTo({
+        top: targetSection.offsetTop - 80,
+        behavior: 'smooth'
       });
-      
-      // Activate section
-      activateSection(targetSection);
     });
   });
   
-  // Scroll handler for section activation
+  // Header scroll effect
+  const header = document.querySelector('header');
   window.addEventListener('scroll', function() {
-    let current = '';
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      
-      if (pageYOffset >= (sectionTop - 100) && pageYOffset < (sectionTop + sectionHeight - 100)) {
-        current = section.getAttribute('id');
-        activateSection(section);
-      }
-    });
+    if (window.scrollY > 50) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
   });
   
-  // Function to activate a section
-  function activateSection(section) {
-    sections.forEach(s => s.classList.remove('section-active'));
-    section.classList.add('section-active');
-    
-    // Animate content
-    const content = section.querySelector('.section-content');
-    content.style.animation = 'none';
-    setTimeout(() => {
-      content.style.animation = 'fadeInUp 0.8s ease-out forwards';
-    }, 10);
-  }
+  // Intersection Observer for section animations
+  const sections = document.querySelectorAll('.page-section');
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
   
-  // Initialize first section
-  activateSection(document.querySelector('#resume'));
-  
-  // Intersection Observer for project items
-  const projectObserver = new IntersectionObserver((entries) => {
+  const sectionObserver = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('section-active');
+        entry.target.classList.add('visible');
+        
+        // Animate project items sequentially
+        if (entry.target.id === 'projects') {
+          const projectItems = entry.target.querySelectorAll('.project-item');
+          projectItems.forEach((item, index) => {
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, index * 150);
+          });
+        }
+        
+        // Animate skill bars
+        if (entry.target.id === 'about') {
+          const skillBars = entry.target.querySelectorAll('.skill-level');
+          skillBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+              bar.style.width = width;
+            }, 100);
+          });
+        }
       }
     });
-  }, { threshold: 0.1 });
+  }, observerOptions);
   
-  document.querySelectorAll('.page-section').forEach(section => {
-    projectObserver.observe(section);
+  sections.forEach(section => {
+    sectionObserver.observe(section);
   });
+  
+  // Initialize first section
+  sections[0].classList.add('visible');
 });
