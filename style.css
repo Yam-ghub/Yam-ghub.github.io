@@ -453,7 +453,7 @@ footer {
   }
   .project-item {
     min-width: unset;
-    width: 90vw;
+    width: 120vw;
     max-width: 95vw;
     margin: 0 auto;
     flex: 0 0 auto;
