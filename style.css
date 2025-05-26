@@ -201,8 +201,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
   z-index: -1;
   transform: translateY(100%);
@@ -453,8 +453,8 @@ footer {
   }
   .project-item {
     min-width: unset;
-    width: 120vw;
-    max-width: 95vw;
+    width: 90vw;
+    max-width: 150vw;
     margin: 0 auto;
     flex: 0 0 auto;
   }
