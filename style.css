@@ -443,14 +443,19 @@ footer {
 
   .project-list {
     display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 1rem;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: unset;
+    gap: 1.5rem;
     padding-bottom: 1rem;
+    max-height: 80vh;
     -webkit-overflow-scrolling: touch;
   }
   .project-item {
-    min-width: 260px;
+    min-width: unset;
+    width: 90vw;
+    max-width: 95vw;
+    margin: 0 auto;
     flex: 0 0 auto;
   }
 }

@@ -1,1 +1,4 @@
-Net
+- Fix the scroll in Projects 
+- Fix the mobile part responsiveness
+- Add Projects
+
