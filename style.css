@@ -151,9 +151,12 @@ main {
 .project-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  padding: 0;
+  overflow: unset;
+  max-height: unset;
 }
 
 .project-item {
@@ -164,6 +167,11 @@ main {
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .project-item:hover {
@@ -445,20 +453,16 @@ footer {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    overflow-x: unset;
-    gap: 1.5rem;
+    gap: 1.2rem;
     padding-bottom: 1rem;
     max-height: 80vh;
     -webkit-overflow-scrolling: touch;
   }
   .project-item {
-    min-width: unset;
-    width: 98vw;
-    max-width: 98vw;
+    width: 96vw;
+    max-width: 96vw;
     margin: 0 auto;
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    padding: 1.2rem;
+    padding: 1.1rem;
   }
 }
 }
