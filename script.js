@@ -81,25 +81,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize first section
   sections[0].classList.add('visible');
 
-  // Add this to your script.js
-document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-  // Toggle mobile nav
-  document.querySelector('nav').classList.toggle('active');
-  
-  // Toggle all section panels
-  const allSections = document.querySelectorAll('.page-section');
-  const shouldShow = !allSections[0].classList.contains('active');
-  
-  allSections.forEach(section => {
-    if (shouldShow) {
-      section.classList.add('active');
-    } else {
-      section.classList.remove('active');
+  // Mobile menu toggle with icon change
+  mobileMenuBtn.addEventListener('click', function() {
+    nav.classList.toggle('active');
+    const icon = this.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
     }
   });
-  
-  // Update hamburger icon
-  this.querySelector('i').classList.toggle('fa-times');
-  this.querySelector('i').classList.toggle('fa-bars');
-});
+
+  // Close menu when clicking a nav link
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      nav.classList.remove('active');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (icon) {
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      }
+    });
+  });
 });
