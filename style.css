@@ -453,37 +453,34 @@ footer {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    gap: 2rem;
+    gap: 2.2rem;
     padding-bottom: 1.5rem;
     max-height: 80vh;
     -webkit-overflow-scrolling: touch;
-    align-items: center;
+    align-items: stretch;
   }
   .project-item {
-    width: 90vw;
-    max-width: 90vw;
+    width: 99vw;
+    max-width: 99vw;
     aspect-ratio: 1 / 1;
-    margin: 0 auto;
-    padding: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 1.2rem 1.1rem;
+    display: block;
+    justify-content: unset;
+    align-items: unset;
   }
   .project-link {
-    padding: 1rem;
+    padding: 0.7rem 0.5rem;
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
   }
   .project-icon {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
+    text-align: left;
   }
   .project-item h3, .project-item p, .project-tech {
-    text-align: center;
+    text-align: left;
   }
 }
 }
