@@ -80,4 +80,26 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize first section
   sections[0].classList.add('visible');
+
+  // Add this to your script.js
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+  // Toggle mobile nav
+  document.querySelector('nav').classList.toggle('active');
+  
+  // Toggle all section panels
+  const allSections = document.querySelectorAll('.page-section');
+  const shouldShow = !allSections[0].classList.contains('active');
+  
+  allSections.forEach(section => {
+    if (shouldShow) {
+      section.classList.add('active');
+    } else {
+      section.classList.remove('active');
+    }
+  });
+  
+  // Update hamburger icon
+  this.querySelector('i').classList.toggle('fa-times');
+  this.querySelector('i').classList.toggle('fa-bars');
+});
 });
