@@ -152,8 +152,8 @@ main {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
   padding: 0;
   overflow: unset;
   max-height: unset;
@@ -161,9 +161,9 @@ main {
 
 .project-item {
   background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 2.2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
   transition: all 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
@@ -176,7 +176,7 @@ main {
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .project-item h3 {
@@ -453,16 +453,37 @@ footer {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    gap: 1.2rem;
-    padding-bottom: 1rem;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
     max-height: 80vh;
     -webkit-overflow-scrolling: touch;
+    align-items: center;
   }
   .project-item {
-    width: 96vw;
-    max-width: 96vw;
+    width: 90vw;
+    max-width: 90vw;
+    aspect-ratio: 1 / 1;
     margin: 0 auto;
-    padding: 1.1rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-link {
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-icon {
+    margin-bottom: 1rem;
+  }
+  .project-item h3, .project-item p, .project-tech {
+    text-align: center;
   }
 }
 }
